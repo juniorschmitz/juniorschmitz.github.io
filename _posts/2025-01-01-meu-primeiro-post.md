@@ -1,27 +1,29 @@
 ---
 layout: post
-title: "Meu Primeiro Post no GitHub Pages"
+title: "Meu Primeiro Post - Funcionando!"
 date: 2025-01-01 10:00:00 -0300
-author: "Seu Nome"
-tags: [jekyll, github-pages, blog]
-image: "/assets/images/posts/primeiro-post.jpg"
-excerpt: "Como criar um blog moderno usando GitHub Pages e Jekyll"
+author: "Junior Schmitz"
+tags: [github-pages, jekyll, blog, primeiro-post]
 ---
 
-# Meu Primeiro Post
+# 🎉 Funcionou!
 
-Este é o conteúdo do meu primeiro post. Aqui você pode usar **Markdown** para formatar o texto.
+Se você está lendo isso, significa que o GitHub Pages está funcionando perfeitamente!
 
-## Recursos do Blog
+## O que temos aqui
 
-- ✅ Design responsivo
-- ✅ Navegação intuitiva  
-- ✅ SEO otimizado
+- ✅ Jekyll funcionando
+- ✅ Layout responsivo  
 - ✅ Syntax highlighting
-- ✅ Compartilhamento social
+- ✅ Posts organizados por data
+- ✅ Design moderno e limpo
+
+## Exemplo de código
 
 ```javascript
-// Exemplo de código
-function saudarVisitante() {
-  console.log('Bem-vindo ao meu blog!');
+function saudarVisitantes() {
+    console.log('Bem-vindos ao meu blog!');
+    console.log('GitHub Pages + Jekyll = ❤️');
 }
+
+saudarVisitantes();

@@ -33,7 +33,6 @@ paginate_path: "/page:num/"
 
 # Configurações de SEO
 lang: pt-BR
-google_analytics: "SEU-ID-GOOGLE-ANALYTICS"
 
 # Configurações de build
 sass:
