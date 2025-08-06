@@ -1,0 +1,57 @@
+---
+layout: default
+pagination:
+  enabled: true
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ site.title }}</h1>
+      <p class="hero-description">{{ site.description }}</p>
+      <a href="#posts" class="btn btn-primary">Ver Posts</a>
+    </div>
+  </div>
+</section>
+
+<section id="posts" class="posts-section">
+  <div class="container">
+    <h2 class="section-title">Posts Recentes</h2>
+    
+    <div class="posts-grid">
+      {% for post in paginator.posts %}
+        {% include post-card.html %}
+      {% endfor %}
+    </div>
+
+    <!-- Paginação -->
+    {% if paginator.total_pages > 1 %}
+      <nav class="pagination">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-btn">← Anterior</a>
+        {% endif %}
+        
+        <span class="pagination-info">
+          Página {{ paginator.page }} de {{ paginator.total_pages }}
+        </span>
+        
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-btn">Próximo →</a>
+        {% endif %}
+      </nav>
+    {% endif %}
+  </div>
+</section>
+
+<section class="about-preview">
+  <div class="container">
+    <div class="about-content">
+      <h2>Sobre Mim</h2>
+      <p>{{ site.author.bio }}</p>
+      <a href="/pages/about/" class="btn btn-outline">Saiba Mais</a>
+    </div>
+    <div class="about-avatar">
+      <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" class="avatar">
+    </div>
+  </div>
+</section>

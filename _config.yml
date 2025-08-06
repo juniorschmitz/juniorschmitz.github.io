@@ -1,0 +1,49 @@
+# Configurações básicas do site
+title: "Seu Nome - Blog de Tecnologia"
+description: "Blog sobre desenvolvimento, tecnologia e programação"
+url: "https://seuusuario.github.io"
+baseurl: ""
+
+# Configurações do autor
+author:
+  name: "Seu Nome"
+  email: "seu@email.com"
+  bio: "Desenvolvedor Full Stack apaixonado por tecnologia"
+  avatar: "/assets/images/avatar.jpg"
+  social:
+    github: "seuusuario"
+    linkedin: "seu-linkedin"
+    twitter: "seutwitter"
+
+# Configurações de build
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+timezone: America/Sao_Paulo
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Paginação
+paginate: 6
+paginate_path: "/page:num/"
+
+# Configurações de SEO
+lang: pt-BR
+google_analytics: "SEU-ID-GOOGLE-ANALYTICS"
+
+# Configurações de build
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclusões
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/

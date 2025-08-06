@@ -1,0 +1,44 @@
+<header class="site-header">
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="{{ '/' | relative_url }}">
+        <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" class="brand-avatar">
+        <span class="brand-text">{{ site.author.name }}</span>
+      </a>
+
+      <button class="navbar-toggle" type="button" aria-label="Toggle navigation">
+        <span class="navbar-toggle-icon"></span>
+      </button>
+
+      <div class="navbar-menu">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if page.url contains '/pages/about' %}active{% endif %}" href="{{ '/pages/about/' | relative_url }}">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if page.url contains '/pages/portfolio' %}active{% endif %}" href="{{ '/pages/portfolio/' | relative_url }}">Portfólio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if page.url contains '/pages/contact' %}active{% endif %}" href="{{ '/pages/contact/' | relative_url }}">Contato</a>
+          </li>
+        </ul>
+
+        <div class="navbar-social">
+          {% if site.author.social.github %}
+            <a href="https://github.com/{{ site.author.social.github }}" target="_blank" aria-label="GitHub">
+              <svg class="icon"><!-- GitHub icon SVG --></svg>
+            </a>
+          {% endif %}
+          {% if site.author.social.linkedin %}
+            <a href="https://linkedin.com/in/{{ site.author.social.linkedin }}" target="_blank" aria-label="LinkedIn">
+              <svg class="icon"><!-- LinkedIn icon SVG --></svg>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

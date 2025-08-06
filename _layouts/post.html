@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <div class="container">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <div class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%d de %B de %Y" }}
+        </time>
+        {% if page.author %}
+          <span class="post-author">por {{ page.author }}</span>
+        {% endif %}
+        {% if page.tags.size > 0 %}
+          <div class="post-tags">
+            {% for tag in page.tags %}
+              <span class="tag">#{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="post-content">
+      {{ content }}
+    </div>
+
+    <footer class="post-footer">
+      <div class="post-navigation">
+        {% if page.previous.url %}
+          <a class="prev-post" href="{{ page.previous.url | relative_url }}">
+            <span class="nav-label">← Post Anterior</span>
+            <span class="nav-title">{{ page.previous.title }}</span>
+          </a>
+        {% endif %}
+        
+        {% if page.next.url %}
+          <a class="next-post" href="{{ page.next.url | relative_url }}">
+            <span class="nav-label">Próximo Post →</span>
+            <span class="nav-title">{{ page.next.title }}</span>
+          </a>
+        {% endif %}
+      </div>
+
+      <div class="post-share">
+        <h4>Compartilhar este post:</h4>
+        <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url }}" target="_blank" class="share-twitter">Twitter</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" target="_blank" class="share-linkedin">LinkedIn</a>
+      </div>
+    </footer>
+  </div>
+</article>
