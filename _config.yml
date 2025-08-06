@@ -1,19 +1,18 @@
 # Configurações básicas do site
-title: "Seu Nome - Blog de Tecnologia"
-description: "Blog sobre desenvolvimento, tecnologia e programação"
-url: "https://seuusuario.github.io"
+title: "Jacques - Testing Blog"
+description: "Blog sobre desenvolvimento, testes, tecnologia, IA e programação."
+url: "https://juniorschmitz.github.io"
 baseurl: ""
 
 # Configurações do autor
 author:
-  name: "Seu Nome"
-  email: "seu@email.com"
-  bio: "Desenvolvedor Full Stack apaixonado por tecnologia"
+  name: "Jacques Schmitz Junior"
+  email: "juniorschmitz9@gmail.com"
+  bio: "QA Manager apaixonado por tecnologia e qualidade de software."
   avatar: "/assets/images/avatar.jpg"
   social:
-    github: "seuusuario"
-    linkedin: "seu-linkedin"
-    twitter: "seutwitter"
+    github: "juniorschmitz"
+    linkedin: "https://www.linkedin.com/in/jacques-schmitz-junior/"
 
 # Configurações de build
 markdown: kramdown
